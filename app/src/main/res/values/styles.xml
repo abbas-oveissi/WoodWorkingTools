@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.WoodWorking.Settings.Title" parent="">
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:gravity">center|start</item>
+    </style>
+
+    <style name="Widget.WoodWorking.Chip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="rippleColor">?attr/colorPrimary</item>
+    </style>
+
+</resources>

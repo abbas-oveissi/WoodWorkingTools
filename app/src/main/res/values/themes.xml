@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Platform.V21.Theme.WoodWorking" parent="Theme.MaterialComponents.Light.NoActionBar" />
+
+    <style name="Platform.Theme.WoodWorking" parent="Platform.V21.Theme.WoodWorking" />
+
+    <style name="Base.Theme.WoodWorking" parent="Platform.Theme.WoodWorking">
+        <!-- Default styles for views -->
+        <item name="chipStyle">@style/Widget.WoodWorking.Chip</item>
+        <item name="chipStandaloneStyle">@style/Widget.WoodWorking.Chip</item>
+        <item name="chipGroupStyle">@style/Widget.WoodWorking.Chip</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="Theme.WoodWorking" parent="Base.Theme.WoodWorking">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorPrimaryVariant">@color/brown_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/brown_light</item>
+        <item name="colorSecondaryVariant">@color/brown</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/app_background</item>
+    </style>
+
+    <style name="Theme.WoodWorking.MainActivity">
+
+    </style>
+
+    <style name="ThemeOverlay.WoodWorking.CardView.Button" parent="">
+        <item name="colorSurface">?attr/colorPrimary</item>
+    </style>
+
+    <style name="ThemeOverlay.WoodWorking.Chip.Choice" parent="">
+        <item name="android:colorControlHighlight">#5677FC</item>
+    </style>
+</resources>

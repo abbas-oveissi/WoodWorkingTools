@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Platform.v23.Theme.WoodWorking" parent="Platform.V21.Theme.WoodWorking" />
+
+    <style name="Platform.Theme.WoodWorking" parent="Platform.v23.Theme.WoodWorking" />
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ir.oveissi.woodworking.features.home.HomeFragment"
+        android:label="@string/app_name">
+
+        <action
+            android:id="@+id/action_homeFragment_to_drawingFragment"
+            app:destination="@id/drawingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calculationFragment"
+            app:destination="@id/calculationFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/drawingFragment"
+        android:name="ir.oveissi.woodworking.features.drawing.DrawingFragment"
+        android:label="@string/model_drawing">
+        <argument
+            android:name="imageUri"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calculationFragment"
+        android:name="ir.oveissi.woodworking.features.calculation.CalculationFragment"
+        android:label="@string/degree_calculator"/>
+
+
+</navigation>

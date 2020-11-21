@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="?attr/colorSurface"
+    android:clickable="true"
+    android:paddingBottom="30dp"
+    app:behavior_peekHeight="50dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimaryVariant"
+        android:gravity="center"
+        android:text="@string/settings"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rotate_and_zoom_enabled_title"
+        style="@style/Widget.WoodWorking.Settings.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center|start"
+        android:text="@string/enable_rotate_and_zoom"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/rotate_and_zoom_enabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@id/rotate_and_zoom_enabled_title"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintTop_toTopOf="@id/rotate_and_zoom_enabled_title" />
+
+
+    <TextView
+        android:id="@+id/force_max_brightness_title"
+        style="@style/Widget.WoodWorking.Settings.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/force_max_brightness"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintTop_toBottomOf="@id/rotate_and_zoom_enabled_title" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/max_brightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/force_max_brightness_title"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintTop_toTopOf="@id/force_max_brightness_title" />
+
+
+    <TextView
+        android:id="@+id/edge_detection_title"
+        style="@style/Widget.WoodWorking.Settings.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/enabled_edge_detection"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintTop_toBottomOf="@id/force_max_brightness_title" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/enabled_edge_detection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/edge_detection_title"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintTop_toTopOf="@id/edge_detection_title" />
+
+
+    <TextView
+        android:id="@+id/flip_title"
+        style="@style/Widget.WoodWorking.Settings.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/flip"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintTop_toBottomOf="@id/edge_detection_title" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/flip_title"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintTop_toTopOf="@id/flip_title"
+        app:selectionRequired="false"
+        app:singleSelection="false">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/flip_horizontally"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/flip_horizontally"
+            app:layout_constraintBottom_toBottomOf="@id/flip_title"
+            app:layout_constraintEnd_toStartOf="@id/flip_vertically"
+            app:layout_constraintTop_toTopOf="@id/flip_title" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/flip_vertically"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flip_vertically"
+            android:textSize="8sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/flip_title"
+            app:layout_constraintBottom_toBottomOf="@id/flip_title"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintTop_toTopOf="@id/flip_title" />
+    </com.google.android.material.chip.ChipGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
